@@ -1,0 +1,17 @@
+<h2>In here we will be listing all of our celebs</h2>
+
+<ul>
+  {{#each data}}
+  <li>{{name}}</li>
+  <form action="/celebrities/{{_id}}/delete" method="POST">
+  <button>x</button>
+  </form>
+  <form action="/celebrities/{{_id}}/edit" method="POST">
+  <button>Edit</button>
+  </form>
+  {{/each}}
+</ul>
+
+<form action="/celebrities/create">
+<button>Add Celebrity</button>
+</form>
